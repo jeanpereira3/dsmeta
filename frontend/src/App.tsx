@@ -13,8 +13,9 @@ function App() {
             <SalesCard />
           </div>
         </section>
+        <ToastContainer />
       </main>
-      <ToastContainer />
+
     </>
   )
 }

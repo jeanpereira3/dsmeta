@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import icon from '../../assets/img/notification-icon.svg'
 import { BASE_URL } from '../../utils/request'
 import './style.css'
@@ -10,11 +11,11 @@ type Props = {
 
 function handleClick(saleId: number) {
     axios(`${BASE_URL}/sales/${saleId}/notification`).then(response => {
-        // try {
-        // toast.success("SMS enviado com sucesso")
-        // } catch (error) {
-        // toast.error('erro')
-        // }
+        try {
+            toast.success("SMS enviado com sucesso")
+        } catch (error) {
+            toast.error('erro')
+        }
 
     })
 }

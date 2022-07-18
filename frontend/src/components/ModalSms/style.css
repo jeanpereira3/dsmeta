@@ -22,21 +22,21 @@
 }
 
 .modal-sms {
-    top: 20px;
-    right: 20px;
+    top: 0px;
+    left: 0;
     position: fixed;
     padding-top: 10px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    width: 260px;
+    width: 100%;
     height: 50px;
     background: #19202c;
-    border-radius: 10px;
-    -webkit-animation: fadeInUp 500ms ease-in-out;
+    border-radius: 0 0 10px 10px;
+    -webkit-animation: fadeInDown 500ms ease-in-out;
     /* Chrome, Safari, Opera */
-    animation: fadeInUp 500ms ease-in-out;
+    animation: fadeInUDown 500ms ease-in-out;
 }
 
 .sms-load {
@@ -46,4 +46,14 @@
     height: 10px;
     background: #738bc5;
     animation: barraLoad 4s linear;
+}
+
+@media (min-width: 576px) {
+    .modal-sms {
+        top: 20px;
+        right: 20px;
+        width: 260px;
+        border-radius: 10px;
+
+    }
 }

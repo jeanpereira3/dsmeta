@@ -1,9 +1,13 @@
-import { ToastContainer } from "react-toastify"
-import "react-toastify/dist/ReactToastify.css"
 import Header from "./components/Header"
+import ModalSms from "./components/ModalSms"
 import SalesCard from "./components/SalesCard"
+import Modal from 'react-modal'
+import { useState } from 'react'
+
+Modal.setAppElement('#root')
 
 function App() {
+
   return (
     <>
       <Header />
@@ -13,7 +17,6 @@ function App() {
             <SalesCard />
           </div>
         </section>
-        <ToastContainer />
       </main>
 
     </>
